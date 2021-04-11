@@ -1,0 +1,13 @@
+public class PrintingTheTable
+{
+    public static void main(String args[])
+    {
+        int num=5, i, tab;
+        System.out.println("Table of " + num + " is\n");
+        for(i=1; i<=10; i++)
+        {
+            tab = num*i;
+            System.out.println(num + " * " + i + " = " + tab + "\n");
+        }
+    }
+}
