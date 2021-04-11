@@ -1,0 +1,18 @@
+//program to find greatest number 
+public class Greater_Number {
+
+	public static void main(String[] args) {
+		int i,j,k; // declaration
+		i = 14;
+		j = 2;
+		k = 19;
+		if(i>j && i>k)    //condition to check i is greater
+		{System.out.println("Greatest number "+i);}
+		else if(j>i && j>k)  //condition to check j is greater
+		{System.out.println("Greatest number "+j);}
+		else {System.out.println("Greatest number "+k);}
+		
+
+	}
+
+}
