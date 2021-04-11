@@ -1,0 +1,16 @@
+//program to find sum of digits
+public class sum_of_digits {
+ public static void main(String[] args)
+ {
+	 int number,sum=0,i;
+	 number=54321;
+	 while(number!=0)
+	 {
+	   i=number%10;
+	   number=number/10;
+	   sum+=i;
+	 }
+	 System.out.println("Sum of Digits : "+sum);
+	 
+ } 
+}
