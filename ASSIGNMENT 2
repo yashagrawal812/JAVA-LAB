@@ -1,0 +1,74 @@
+
+import java.util.Scanner;
+public class Assignment2 {
+
+	public static void main(String[] args) {
+		Scanner scan=new Scanner(System.in);
+		int choice, i, tab,ch;
+		do   {		
+			System.out.println("1.Printing the Table .\n2.Sum of Digits .\n3.Reverse a Number .\n4.Check the Armstrong number .");
+        System.out.println("Enter your choice :");
+        choice=scan.nextInt();
+        switch(choice)
+        {
+        case 1:{ int num;
+                 System.out.println("\nEnter the number");
+                 num=scan.nextInt();
+                 System.out.println("Table of " + num + " is\n");
+              
+                 for(i=1; i<=10; i++)
+                 {
+                  tab = num*i;
+                  System.out.println(num + " * " + i + " = " + tab + "\n");
+                 }
+                }break;
+        case 2:{int number,sum1=0,r;
+   	            System.out.println("\nEnter the Number");
+   	            number=scan.nextInt();
+   	            while(number!=0)
+   	             {
+   	              r=number%10;
+   	              number=number/10;
+   	              sum1+=r;
+   	             }
+            	 System.out.println("Sum of Digits : "+sum1);
+                }break;	
+        case 3: {
+    	       	int num,num1=0;
+    	       	System.out.println("\nEnter the Number");
+    	       	num=scan.nextInt();
+    	       	System.out.println("Original number : "+num);
+                while(num!=0)
+                 {
+                  num1=(10*num1);
+                  num1+=(num%10);
+                  num=(num/10);
+                 }
+    		    System.out.println("Reverase of a number : "+num1);
+    	        }break;
+        case 4: {
+        	int n,sum=0,n2,num1;
+        	System.out.println("\n enter the number to check palindrome .");
+        	n=scan.nextInt();
+        	num1=n;
+        			while(num1!=0)
+        			{
+        				n2=num1%10;
+        				num1=num1/10;
+        				sum+=(n2*n2*n2);
+        			}
+        	if(n==sum)
+        	{
+        		System.out.println("The number is Armstrong");
+        	}
+        	else
+        		System.out.println("The number is not Armstrong");
+        }break;
+        default : System.out.println("\nEnter right choice");
+        break;}
+        System.out.println("Enter 1 to continue");
+        ch=scan.nextInt();
+        }while(ch==1);
+    
+        }
+}
