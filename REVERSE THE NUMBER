@@ -1,0 +1,16 @@
+//program to print reverse of a number
+public class Reverse_The_Number {
+
+	public static void main(String[] args) {
+		int num=12345,num1=0;
+		System.out.println("Original number : "+num);
+        while(num!=0)
+        {
+         num1=(10*num1);
+         num1+=(num%10);
+         num=(num/10);
+        }
+		System.out.println("Reverase of a number : "+num1);
+	}
+
+}
