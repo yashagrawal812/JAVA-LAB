@@ -1,0 +1,71 @@
+
+class Shape { int x =1;
+ Shape ()
+ {
+	 System.out.println("\n Base class");
+ }
+ public Shape(int x)
+ { 
+	 this.x = x;
+ }
+public void draw () {
+	System.out.println ("\nCan draw any shape");
+}
+}
+class Square extends Shape{
+Square()
+{
+	System.out.println("\n Drived class");
+}
+public Square(int p)
+{
+	super(p);
+}
+	public void display ()
+	{
+		System.out.println("\nIt display Squares") ;
+	}
+
+} 
+class Area extends Square{
+Area()
+{
+	System.out.println("\n Multilevel class");
+}
+public Area(int q)
+{
+  super(q);	
+}
+ public void area ()
+	{
+	int area ;
+	area = x * x ;
+	System.out.println("\nArea of Square : "+area);
+	}	
+}
+class Circle extends Shape {
+Circle()
+{
+ System.out.println("\nHierarical class");	
+}
+
+	public void display ()
+	{
+		System.out.println("\n It display circle");
+		System.out.println("\n Area of a circle :"+((22/7)*x*x));
+	}
+}
+public class Inheritance 
+{
+	public static void  main (String[] args)
+	{
+		Square sq = new Square () ;
+		Area A=new Area () ;
+		Circle c = new Circle ();
+		sq.draw();
+		sq.display();
+		System.out.println(sq.x);
+		A.area( );
+		c.display ();
+	}
+}
