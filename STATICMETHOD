@@ -1,0 +1,33 @@
+
+public class StaticMethodDemo 
+{
+ int rollNo;
+ static String empTrainer;
+private static String name;
+ StaticMethodDemo(int rollNo)
+   {
+	this.rollNo = rollNo;
+   }  
+ static 
+ {
+	 empTrainer = "Mr.Naresh Chandra";
+ }
+ public void display()
+ {
+	 System.out.println(rollNo+"\t"+empTrainer);
+ }
+ static void changeTrainer(String name)
+ {  
+	empTrainer=name;
+ }
+ public static void main(String[] args)
+ {
+	 StaticMethodDemo S1=new StaticMethodDemo(123);
+	 S1.display();
+	 StaticMethodDemo S2=new StaticMethodDemo(124);
+	 S2.display();
+	 StaticMethodDemo.changeTrainer("Mr Arun Tripathi");
+	 StaticMethodDemo S3 = new StaticMethodDemo(125) ;
+     S3.display();
+ }
+}
