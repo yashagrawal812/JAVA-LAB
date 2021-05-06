@@ -1,0 +1,64 @@
+
+class Shape1 {
+ void draw()
+ {
+	 System.out.println("draw shape");
+ }
+ void erase ()
+ {
+	System.out.println("erase shape"); 
+ }
+}
+class Circle1 extends Shape1
+{
+    void draw()
+	{
+		System.out.println("draw circle");
+	}
+	void erase()
+	{
+		System.out.println("erase circle");
+	}
+}
+class Triangle extends Shape1 {
+	void draw()
+	{
+		System.out.println("draw Triangle");
+	}
+	void erase()
+	{
+		System.out.println("erase Triangle");
+	}
+}
+class Square1 extends Shape1
+{
+	void draw()
+	{
+		System.out.println("draw square");
+	}
+	void erase()
+	{
+		System.out.println("erase square");
+	}
+}
+public class Polymorphism {
+public static void  main(String []args)
+{
+	Shape1 s = new Shape1();
+	s.draw();
+	s.erase();
+	Circle1 c = new Circle1() ;
+	c.draw();
+	c.erase();
+	Triangle t=new Triangle();
+	t.draw();
+	t.erase();
+	Square1 sq = new Square1();
+	sq.draw();
+	sq.erase();
+	Shape1 s1 =new Circle1();  //upcasting
+	s1.draw();
+	s1.erase();
+	
+}
+}
